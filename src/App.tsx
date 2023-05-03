@@ -1,26 +1,47 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, {useState} from 'react'
+import './App.css'
+import Income from './components/Income'
+import Expense from './components/Expense'
+import Saving from './components/Saving'
+import Balance from './components/Balance'
 
-function App() {
+const App = () => {
+  const [balance, setBalance] = useState(0)
+  const [savings, setSavings] = useState(0)
+
+  const Incomes = (amount: number) => {
+    setBalance(p => p + amount)
+  }
+
+  const Expenses = (amount: number) => {
+    if(amount > balance){
+      alert('Expense cannot be greater than the current balance.')
+      return
+    }
+    setBalance(p => p-amount)
+  }
+
+  const onSavings = (amount: number) => {
+    if(amount > balance) {
+      alert("you dont have enought money")
+      return
+    }
+    setBalance(p => p - amount)
+    setSavings(p => p + amount)
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <main className='main'>
+      <section className='main__acounts'>
+        <Income Incomes={Incomes}/>
+        <Expense Expenses={Expenses}/>
+        <Saving savings={savings}/>
+      </section>
+      <section className='main__balance'>
+        <Balance Balance={balance} onSavings={onSavings}/>
+      </section>
+    </main>
+  )
 }
 
-export default App;
+export default App
