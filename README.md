@@ -1,32 +1,19 @@
-# Getting Started with React Components & React Hooks
+# Budget-pp
 
-these assignment requires also TypeScript when passing props to React Components
+This is a personal finance app built using React typscript. It allows users to manage their incomes, expenses, and savings. The app provides a simple user interface to input incomes, expenses, and transfer amounts to the savings account.
 
-## Requirements
+## Budget-pp
+- Add incomes with descriptions and dates
+- Add expenses with descriptions and dates
+- Transfer amounts to a savings account
+- Set a target for the savings account and display the progress
+- Calculate the current balance based on incomes and expenses
 
-1. Create a simple one-page application to store incomes and expenses, and set
-saving target.
-2. Account balance can be calculated from incomes, expenses, and saving.
-`incomes - expenses - saving = balance`
-3. Users should be able to add new incomes, expenses, transfer from balance account to saving account, and reset saving target. Balance should never be negative number.
-4. Use React Hooks where applicable. TypeScript must be used at least for the props types.
-5. Style is not the priority in this assignment.
+## Built With
 
-## Bonus point
+- React
+- TypeScript
 
-1. Add function to transfer money back from saving account to current balance.
-2. Set source of incomes and expenses as the select elements with the categories of your choice.
-3. Add edit/delete button and according functions for incomes and expenses.
-4. Use `d3` package to print out 2 piecharts for incomes and expenses in categories (I only give bonus point when you use `d3`, not the other handier libraries).
+## Live view
 
-## References
-
-Be creative with your style!
-
-![demo1](demo1.png)
----
-
-![demo2](demo2.png)
----
-
-![demo3](demo3.png)
+To live preview the site visit [this]()
