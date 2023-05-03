@@ -13,7 +13,3 @@ This is a personal finance app built using React typscript. It allows users to m
 
 - React
 - TypeScript
-
-## Live view
-
-To live preview the site visit [this]()
